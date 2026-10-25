@@ -159,3 +159,45 @@ body {
     object-fit: contain;
     display: block;
 }
+
+.pie-pagina {
+    padding: 40px 5% 20px;
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+.contenido-pie {
+    margin-bottom: 25px;
+}
+
+.pie-pagina .logo {
+    color: var(--fondo)
+}
+
+.contenido-pie p {
+    color: #BDB9B1;
+    font-size: 14px;
+}
+
+.enlaces-pie {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.enlaces-pie a {
+    color: var(--fondo);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.enlaces-pie a:hover {
+    color: var(--acento);
+}
+
+.derechos {
+    padding-top: 15px;
+    border-top: 1px solid #44413C;
+    color: #BDB9B1;
+    font-size: 12px;
+}
