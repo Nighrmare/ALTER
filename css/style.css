@@ -99,3 +99,63 @@ body {
 .boton-principal:hover {
     background-color: var(--acento);
 }
+
+.productos {
+    padding: 60px 5%;
+}
+
+.encabezado-productos {
+    margin-bottom: 35px;
+}
+
+.encabezado-productos h2 {
+    margin: 15px 0;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.encabezado-productos > p:last-child {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.producto h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.producto p {
+    margin: 0 0 10px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.producto span{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 18px;
+    background-color: #ECEAE4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
