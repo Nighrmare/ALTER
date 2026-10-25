@@ -42,14 +42,52 @@ body {
     letter-spacing: 2px;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .menu a, .carrito {
     color: var(--texto);
     font-size: 14px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .menu a:hover, .carrito:hover {
     color: var(--acento);
+}
+
+.menu .enlace-login {
+    padding: 10px 16px;
+    border: 1px solid var(--texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu .enlace-login:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+.menu a:not(.enlace-login) {
+    position: relative;
+    padding: 10px 0;
+}
+
+.menu a:not(.enlace-login)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 0;
+    height: 1px;
+    background-color: var(--acento);
+    transition: width 0.3s ease;
+}
+
+.menu a:not(.enlace-login):hover::after {
+    width: 100%;
 }
 
 .principal {
