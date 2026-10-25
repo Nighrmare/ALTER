@@ -186,6 +186,14 @@ body {
     gap: 25px;
 }
 
+.producto {
+    transition: transform 0.3s ease;
+}
+
+.producto:hover{
+    transform: translateY(-4px);
+}
+
 .producto h3 {
     margin: 0 0 8px;
     font-size: 16px;
@@ -193,13 +201,14 @@ body {
 }
 
 .producto p {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: var(--texto-secundario);
     font-size: 14px;
+    line-height: 1.5;
 }
 
-.producto span{
-    font-size: 14px;
+.producto .precio {
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -211,6 +220,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .imagen-producto img {
@@ -218,6 +228,11 @@ body {
     height: 100%;
     object-fit: contain;
     display: block;
+    transition: transform 0.4s ease;
+}
+
+.producto:hover .imagen-producto img {
+    transform: scale(1.04);
 }
 
 .pie-pagina {
