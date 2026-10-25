@@ -1,7 +1,7 @@
 :root{
     --fondo: #F7F6F2;
     --texto: #181818;
-    --texto-secundario: #6B682 ;
+    --texto-secundario: #6B6862 ;
     --linea : #DAD6CD ;
     --acento: #C05621;
 }
@@ -50,4 +50,52 @@ body {
 
 .menu a:hover, .carrito:hover {
     color: var(--acento);
+}
+
+.principal {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background-color: #ECEAE4;
+}
+
+.contenido-principal {
+    max-width: 550px;
+}
+
+.etiqueta {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    letter-spacing: 2px;
+
+}
+
+.contenido-principal h1 {
+    margin: 24px 0;
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.descripcion {
+    max-width: 420px;
+    color:var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.boton-principal {
+    display: inline-block;
+    margin-top: 20px;
+    padding:14px 22px;
+    background-color: var(--texto);
+    color: var(--fondo);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.boton-principal:hover {
+    background-color: var(--acento);
 }
