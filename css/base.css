@@ -1,0 +1,18 @@
+:root{
+    --fondo: #F7F6F2;
+    --texto: #181818;
+    --texto-secundario: #6B6862 ;
+    --linea : #DAD6CD ;
+    --acento: #C05621;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'Arial', sans-serif;
+}

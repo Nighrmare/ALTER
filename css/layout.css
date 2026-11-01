@@ -1,0 +1,153 @@
+.anuncio{
+    padding: 10px;
+    background-color: var(--texto);
+    color: var(--fondo);
+    text-align: center;
+    font-size: 12px;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 5%;
+    border-bottom: 1px solid var(--linea);
+
+}
+
+.logo{
+    color: var(--texto);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.menu a, .carrito {
+    color: var(--texto);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrito img {
+    width: 23px;
+    height: 23px;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0);
+    transition: transform 0.3s ease;
+}
+.carrito:hover img {
+    transform: translateY(-2px);
+    filter: brightness(0) saturate(100%) invert(35%) sepia(38%)
+        saturate(1694%) hue-rotate(347deg) brightness(91%) contrast(91%);
+}
+
+.menu a:hover, .carrito:hover {
+    color: var(--acento);
+}
+
+.menu .enlace-login {
+    padding: 10px 16px;
+    border: 1px solid var(--texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu .enlace-login:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+.menu a:not(.enlace-login) {
+    position: relative;
+    padding: 10px 0;
+}
+
+.menu a:not(.enlace-login)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 0;
+    height: 1px;
+    background-color: var(--acento);
+    transition: width 0.3s ease;
+}
+
+.menu a:not(.enlace-login):hover::after {
+    width: 100%;
+}
+
+.pie-pagina {
+    padding: 40px 5% 20px;
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+.contenido-pie {
+    margin-bottom: 25px;
+}
+
+.pie-pagina .logo {
+    color: var(--fondo)
+}
+
+.contenido-pie p {
+    color: #BDB9B1;
+    font-size: 14px;
+}
+
+.enlaces-pie {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.enlaces-pie a {
+    color: var(--fondo);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.enlaces-pie a:hover {
+    color: var(--acento);
+}
+
+.derechos-pie {
+    padding-top: 15px;
+    border-top: 1px solid #44413C;
+    color: #BDB9B1;
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+    .navegacion {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .menu {
+        margin: 0;
+        gap: 15px;
+    }
+
+    .carrito {
+        margin-left:auto;
+    }
+}
