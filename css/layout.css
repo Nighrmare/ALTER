@@ -38,6 +38,14 @@
     transition: color 0.3s ease;
 }
 
+.menu a.activo {
+    color: var(--acento);
+}
+
+.menu a.activo::after {
+    width: 100%;
+}
+
 .carrito {
     display: flex;
     align-items: center;
