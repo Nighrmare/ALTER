@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo | ALTER</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/catalogo.css">
 </head>
+
 <body>
+<header>
+    <div class="anuncio">
+        Nueva Colección 2026 | Descubre la nueva colección de ropa.
+    </div>
     
+    <nav class="navegacion">
+        <a href="index.html" class="logo">ALTER</a>
+
+        <div class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="activo" aria-current="page">Catálogo</a>
+            <a href="login.html" class="enlace-login">Iniciar sesión</a>
+        </div>
+
+        <a href="carrito.html" class="carrito" aria-label="Mi bolsa" title="Mi bolsa">
+            <img src="img/bolsa.svg" alt="">
+        </a>
+    </nav>
+</header>
+
+<main>
+    <section class="encabezado-catalogo">
+        <div class="contenido-encabezado">
+            <p class="etiqueta">EXPLORA ALTER</p>
+            <h1>Nuestra Colección</h1>
+            <p>Descubre las últimas tendencias y encuentra tu estilo único.</p>
+        </div>
+    </section>
+
+    <section class="catalogo-productos">
+
+        <div class="encabezado-listado">
+            <div> 
+                <p class="etiqueta">ALTER COLECCIÓN</p>
+                <h2>Todos los productos</h2>
+            </div>
+
+            <p class="cantidad-productos">Explora nuestra colección</p>
+        </div>
+
+        <div class="rejilla-catalogo">
+            <article class="tarjeta-catalogo">
+                <div class="imagen-catalogo">
+                    <img src="img/camisa_1.jpg" alt="camisa leñadora">
+                </div>
+
+                <h3>Camisa Leñadora</h3>
+                <p>Camisa de algodón para hombre</p>
+                <span class="precio">$60.000</span>
+            </article>
+
+            <article class="tarjeta-catalogo">
+                <div class="imagen-catalogo">
+                    <img src="img/camisa_2.jpg" alt="camisa formal">
+                </div>
+
+                <h3>Camisa Formal</h3>
+                <p>Camisa de algodón para hombre</p>
+                <span class="precio">$70.000</span>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="pie-pagina">
+    <div class="contenido-pie">
+        <a href="index.html" class="logo">ALTER</a>
+        <p>Estilo y comodidad para cada ocasión</p>
+    </div>
+
+    <div class="enlaces-pie">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="carrito.html">Mi bolsa</a>
+    </div>
+
+    <div class="derechos-pie">
+        <p>&copy; 2026 ALTER. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
