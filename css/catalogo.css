@@ -1,29 +1,45 @@
 .encabezado-catalogo {
-    padding: 75px 5%;
+    min-height: 420px;
+    padding: 90px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: var(--fondo);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../img/fondo_catalogo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .contenido-encabezado {
-    max-width: 700px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
 .contenido-encabezado h1 {
     margin-bottom: 25px;
-    color: var(--texto);
+    color: #FFFFFF;
+    font-family: Georgia, serif;
     font-size: 38px;
     font-weight: 600;
 }
 
 .contenido-encabezado p:not(.etiqueta) {
-    color: var(--texto-secundario);
+    color: #E5E1DA;
     font-size: 15px;
     line-height: 1.7;
 }
 
 .contenido-encabezado .etiqueta {
-    margin-bottom: 15px;
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 9px 16px;
+    color: #000000;
+    background-color: rgb(213, 186, 145);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .catalogo-productos {
@@ -65,11 +81,6 @@
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.tarjeta-catalogo:hover {
-    transform: translateY(-4px);
-    border-color: var(--texto-secundario);
-}
-
 .imagen-catalogo {
     width: 100%;
     aspect-ratio: 4 / 5;
@@ -79,14 +90,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-
-.tarjeta-catalogo {
-    min-width: 0;
-    padding: 10px;
-    border: 1px solid var(--linea);
-    background-color: #F1F0EB;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagen-catalogo img {
@@ -130,9 +133,17 @@
     }
 }
 @media (max-width: 600px) {
+    .encabezado-catalogo {
+        min-height: 320px;
+        padding: 60px 5%;
+    }
+
+    .contenido-encabezado h1 {
+        font-size: 30px;
+    }
+
     .rejilla-catalogo {
         grid-template-columns: repeat(2, minmax(0px, 1fr));
         gap: 20px 15px;
     }
 }
-
