@@ -97,6 +97,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border: 1px solid var(--linea);
     display: block;
     transition: transform 0.4s ease;
 }
