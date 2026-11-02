@@ -128,6 +128,77 @@ function mostrarProductosInicio () {
     });
 }
 
+function mostrarMensaje(idMensaje, mensaje, tipo) {
+    const elementoMensaje = document.querySelector(idMensaje);
+    if (!elementoMensaje) return;
+
+    elementoMensaje.textContent = mensaje;
+    elementoMensaje.className = 'mensaje-formulario ' + tipo;
+
+}
+
+function configurarLogin() {
+    const formulario = document.querySelector('#formulario-login');
+    if (!formulario) return;
+
+    formulario.addEventListener('submit', function(evento) {
+        evento.preventDefault();
+
+        const correo = document.querySelector('#correo').value.trim();
+        const contrasena = document.querySelector('#contrasena').value;
+
+        if (!correo || !contrasena) {
+            mostrarMensaje('#mensaje-login', 'Debes completar todos los campos.', 'error');
+            return;
+        }
+        mostrarMensaje('#mensaje-login', 'Los datos ingresados son válidos.', 'exito');
+    });
+}
+
+function configurarRegistro() {
+    const formulario = document.querySelector('#formulario-registro');
+    if (!formulario) return;
+
+    formulario.addEventListener('submit', function(evento) {
+        evento.preventDefault();
+
+        const nombre = document.querySelector('#nombre').value.trim();
+        const correo = document.querySelector('#correo').value.trim();
+        const contrasena = document.querySelector('#contrasena').value;
+        const confirmarContrasena = document.querySelector('#confirmar-contrasena').value;
+
+        if (!nombre || !correo || !contrasena || !confirmarContrasena) {
+            mostrarMensaje('#mensaje-registro', 'Debes completar todos los campos.', 'error');
+            return;
+        }
+
+        if (contrasena !== confirmarContrasena) {
+            mostrarMensaje('#mensaje-registro', 'Las contraseñas no coinciden.', 'error');
+            return;
+        }
+
+        mostrarMensaje('#mensaje-registro', 'Los datos ingresados son válidos.', 'exito');
+    });    
+}
+
+function configurarRecuperar(){
+    const formulario = document.querySelector('#formulario-recuperar');
+    if (!formulario) return;
+
+    formulario.addEventListener('submit', function(evento) {
+        evento.preventDefault();
+
+        const correo = document.querySelector('#correo').value.trim();
+
+        if (!correo) {
+            mostrarMensaje('#mensaje-recuperar', 'Debes ingresar tu correo electrónico.', 'error');
+            return;
+        }
+
+        mostrarMensaje('#mensaje-recuperar', 'El correo es válido.', 'exito');
+    }); 
+}
+
 function configurarFiltros() {
     botonesFiltro.forEach(function(boton) {
         boton.addEventListener('click', function() {
@@ -162,3 +233,6 @@ configurarFiltros();
 configurarBotonesCarrito();
 actualizarContador();
 actualizarContadorCarrito();
+configurarLogin();
+configurarRegistro();
+configurarRecuperar();

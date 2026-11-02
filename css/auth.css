@@ -96,6 +96,31 @@
     text-align: center;
 }
 
+.mensaje-formulario {
+    display: none;
+    margin-top: 15px;
+    padding: 12px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+    border-left: 3px solid transparent;
+}
+
+.mensaje-formulario.exito {
+    display: block;
+    color: #4D7548;
+    background-color: #F2F7F0;
+    border-left-color: #4D7548;
+}
+
+.mensaje-formulario.error {
+    display: block;
+    color: #A94442;
+    background-color: #FDF2F1;
+    border-left-color: #B44343;
+}
+
 @media (max-width: 500px) {
     .inicio-sesion {
         margin: 35px auto;
