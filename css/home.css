@@ -67,7 +67,32 @@
 }
 
 .encabezado-productos {
-    margin-bottom: 35px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--linea);
+}
+
+.titulo-producto .etiqueta {
+    margin: 0 0 12px;
+}
+
+.titulo-producto h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.descripcion-productos {
+    max-width: auto;
+    margin: 0 0 4px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .encabezado-productos h2 {
@@ -84,11 +109,12 @@
 
 .lista-productos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
 }
 
 .producto {
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
@@ -97,7 +123,7 @@
 }
 
 .producto h3 {
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     font-size: 16px;
     font-weight: normal;
 }
@@ -112,13 +138,16 @@
 .producto .precio {
     font-size: 15px;
     font-weight: bold;
+    display: block;
 }
 
 .imagen-producto {
     width: 100%;
     height: 320px;
     margin-bottom: 18px;
-    background-color: #ECEAE4;
+    padding: 8px;
+    background-color: #F1F0EB;
+    border: 1px solid var(--linea);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,11 +157,49 @@
 .imagen-producto img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     display: block;
+    border: 1px solid var(--linea);
     transition: transform 0.4s ease;
 }
 
 .producto:hover .imagen-producto img {
     transform: scale(1.04);
+}
+
+.enlace-catalogo {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.enlace-catalogo a {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 1px solid var(--texto);
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.enlace-catalogo a:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+@media (max-width: 900px) {
+    .lista-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .lista-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-principal {
+        height: 350px;
+    }
 }
