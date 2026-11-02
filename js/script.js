@@ -2,6 +2,7 @@ const rejillaCatalogo = document.querySelector('.rejilla-catalogo');
 const botonesFiltro = document.querySelectorAll('.filtro-categoria');
 const contadorProductos = document.querySelector('.cantidad-productos');
 const contadorCarrito = document.querySelector('.contador-carrito');
+const listaProductosInicio = document.querySelector('.lista-productos');
 
 
 function formatearPrecio(precio) {
@@ -59,7 +60,7 @@ function configurarBotonesCarrito () {
 
         const tarjeta = boton.closest('.tarjeta-catalogo');
         if (!tarjeta) return;
-        
+
         const idProducto = tarjeta.dataset.id;
         
         agregarAlCarrito(idProducto);      
@@ -105,6 +106,28 @@ function actualizarContador() {
     contadorProductos.textContent = productosVisibles.length + ' productos';
 }
 
+function mostrarProductosInicio () {
+    if (!listaProductosInicio) return;
+
+    const productosDestacados = listaProductos.slice(0,4);
+
+    productosDestacados.forEach(function(producto) {
+        const tarjeta = document.createElement('article');
+        
+        tarjeta.classList.add('producto');
+        tarjeta.innerHTML = `
+            <div class="imagen-producto">
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+            </div>
+
+            <h3>${producto.nombre}</h3>
+            <span class="precio">$${formatearPrecio(producto.precio)}</span>
+        `;
+
+        listaProductosInicio.appendChild(tarjeta);
+    });
+}
+
 function configurarFiltros() {
     botonesFiltro.forEach(function(boton) {
         boton.addEventListener('click', function() {
@@ -134,6 +157,7 @@ function configurarFiltros() {
 }
 
 mostrarProductos();
+mostrarProductosInicio();
 configurarFiltros();
 configurarBotonesCarrito();
 actualizarContador();
