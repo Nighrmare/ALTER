@@ -128,6 +128,29 @@
     font-weight: bold;
 }
 
+.filtros-catalogo {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filtro-categoria {
+    padding: 10px 22px;
+    border: 1px solid #D6CEC2;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.filtro-categoria:hover, .filtro-categoria.activo {
+    background-color: #252525;
+    color: #fff;
+    border-color: #252525;
+}
+
 @media (max-width: 900px) {
     .rejilla-catalogo {
         grid-template-columns: repeat(3, minmax(0px, 1fr));

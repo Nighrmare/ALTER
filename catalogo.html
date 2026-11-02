@@ -48,11 +48,17 @@
                 <h2>Todos los productos</h2>
             </div>
 
-            <p class="cantidad-productos">Explora nuestra colección</p>
+            <p class="cantidad-productos"></p>
+        </div>
+
+        <div class="filtros-catalogo">
+            <button class="filtro-categoria activo" data-categoria="todos">Todos</button>
+            <button class="filtro-categoria" data-categoria="camisas">Camisas y camisetas</button>
+            <button class="filtro-categoria" data-categoria="pantalones">Pantalones</button>
         </div>
 
         <div class="rejilla-catalogo">
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="camisas">
                 <div class="imagen-catalogo">
                     <img src="img/camisa_1.jpg" alt="camisa leñadora">
                 </div>
@@ -62,7 +68,7 @@
                 <span class="precio">$60.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="camisas">
                 <div class="imagen-catalogo">
                     <img src="img/camisa_2.jpg" alt="camisa formal">
                 </div>
@@ -72,7 +78,7 @@
                 <span class="precio">$70.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="camisas">
                 <div class="imagen-catalogo">
                     <img src="img/camisa_3.jpg" alt="camiseta gráfica">
                 </div>
@@ -82,7 +88,7 @@
                 <span class="precio">$55.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="camisas">
                 <div class="imagen-catalogo">
                     <img src="img/camisa_4.jpg" alt="camiseta oversized">
                 </div>
@@ -92,7 +98,7 @@
                 <span class="precio">$70.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="camisas">
                 <div class="imagen-catalogo">
                     <img src="img/camisa_5.jpg" alt="polo gris">
                 </div>
@@ -102,7 +108,7 @@
                 <span class="precio">$76.000</span>
             </article>
             
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="pantalones">
                 <div class="imagen-catalogo">
                     <img src="img/pantalon_1.jpg" alt="Pantalon cargo">
                 </div>
@@ -112,7 +118,7 @@
                 <span class="precio">$85.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="pantalones">
                 <div class="imagen-catalogo">
                     <img src="img/pantalon_2.jpg" alt="Pantalon de mezclilla">
                 </div>
@@ -122,7 +128,7 @@
                 <span class="precio">$90.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="pantalones">
                 <div class="imagen-catalogo">
                     <img src="img/pantalon_3.jpg" alt="Pantalon de lino">
                 </div>
@@ -132,7 +138,7 @@
                 <span class="precio">$95.000</span>
             </article>
 
-            <article class="tarjeta-catalogo">
+            <article class="tarjeta-catalogo" data-categoria="pantalones">
                 <div class="imagen-catalogo">
                     <img src="img/pantalon_4.jpg" alt="Pantalón de Vestir">
                 </div>
@@ -162,6 +168,6 @@
         <p>&copy; 2026 ALTER. Todos los derechos reservados.</p>
     </div>
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
